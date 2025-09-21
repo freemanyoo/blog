@@ -3,21 +3,25 @@
 ## 1단계: 기본 구조 및 핵심 기능
 
 ### Week 1: 백엔드 기본 설정
-- [ ] **Spring Boot 프로젝트 의존성 설정 (`build.gradle`)**
-    - [ ] `Spring Web` 추가
-    - [ ] `Spring Data JPA` 추가
-    - [ ] `MariaDB Driver` 추가
-    - [ ] `Spring Security` 추가
-    - [ ] `jjwt-api`, `jjwt-impl`, `jjwt-jackson` (JWT용) 추가
-- [ ] **`application.properties` 설정**
-    - [ ] 데이터베이스 연결 정보 (URL, username, password) 설정
-    - [ ] JPA/Hibernate 설정 (e.g., `spring.jpa.hibernate.ddl-auto=update`)
-    - [ ] JWT secret key 및 만료 시간 설정
+- [x] **Spring Boot 프로젝트 의존성 설정 (`build.gradle`)**
+    - [x] `Spring Web` 추가 (기존에 존재)
+    - [x] `Spring Data JPA` 추가 (기존에 존재)
+    - [x] `MariaDB Driver` 추가 (기존에 존재)
+    - [x] `Spring Security` 추가 (기존에 존재)
+    - [x] `jjwt-api`, `jjwt-impl`, `jjwt-jackson` (JWT용) 추가
+- [x] **민감 정보 관리 설정 (.env)**
+    - [x] `application.properties`에서 DB 및 JWT 설정을 환경 변수(`${...}`) 참조로 변경
+    - [x] 프로젝트 루트에 `.env` 파일 생성
+    - [x] `.gitignore` 파일에 `.env` 추가
+    - [x] `build.gradle`에 `io.github.cdimascio.dotenv` 플러그인 추가
+- [ ] **JPA/Hibernate 설정**
+    - [x] `application.properties`에 `ddl-auto`, `show-sql` 등 설정
 - [ ] **JPA 엔티티 및 관계 매핑**
-    - [ ] `User` 엔티티 클래스 생성
-    - [ ] `Category` 엔티티 클래스 생성
-    - [ ] `Post` 엔티티 클래스 생성
+    - [x] 공통 필드(`createdAt`, `updatedAt`)를 위한 `BaseTimeEntity` 생성
+    - [x] `User` 엔티티를 `BaseTimeEntity` 상속하도록 수정
+    - [x] `Category` 엔티티 클래스 생성
     - [ ] `Tag` 엔티티 클래스 생성
+    - [ ] `Post` 엔티티 클래스 생성 (`BaseTimeEntity` 상속)
     - [ ] `PostTag` 중간 테이블을 포함한 관계 설정 (`@OneToMany`, `@ManyToMany`)
 
 ### Week 2: 핵심 API 구현

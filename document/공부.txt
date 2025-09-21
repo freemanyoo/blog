@@ -1,0 +1,40 @@
+[ ] `build.gradle`에 `io.github.cdimascio.dotenv` 플러그인 추가
+io.github.cdimascio.dotenv 플러그인은 Gradle 프로젝트에서 .env 파일에 정의된 환경변수를 쉽게 로드하고 사용할 수 있게 해주는 기능을 제공합니다.
+
+주요 기능:
+
+.env 파일을 자동으로 읽어서 환경변수를 로드
+
+자바 코드에서 Dotenv.load()를 호출해 .env 변수 값을 쉽게 접근 가능
+
+민감한 정보(비밀번호, API 키 등)를 코드에서 분리하여 관리할 수 있도록 지원
+
+별도 OS 환경 변수 설정 없이 프로젝트 내 환경 변수 관리 편리
+
+즉, 이 플러그인은 개발 중에 .env 파일을 통해 환경 변수를 효율적이고 안전하게 불러와 사용할 수 있게 해줍니다.
+
+===================================================================================
+    @ManyToMany
+    @JoinTable(
+            name = "post_tags",
+            joinColumns = @JoinColumn(name = "post_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+
+      1. `joinColumns`
+
+       - 의미: 관계의 주인(Owner)이 되는 쪽을 연결하는 컬럼 정보입니다.
+       - 설명: 지금 우리는 Post 엔티티 안에서 코드를 작성하고 있으므로, Post가 이 관계의 주인이 됩니다. 따라서 joinColumns는 연결 테이블(post_tags)에서 Post를 참조하는 외래 키 컬럼(post_id)이
+         무엇인지 지정합니다.
+       - 코드: joinColumns = @JoinColumn(name = "post_id")
+           - -> "연결 테이블에서 post_id 컬럼이 Post 테이블을 가리키는 키입니다."
+
+      2. `inverseJoinColumns`
+
+       - 의미: 관계의 주인이 아닌(Inverse) 쪽을 연결하는 컬럼 정보입니다.
+       - 설명: Post의 입장에서 상대방은 Tag입니다. 따라서 inverseJoinColumns는 연결 테이블(post_tags)에서 Tag를 참조하는 외래 키 컬럼(tag_id)이 무엇인지 지정합니다.
+       - 코드: inverseJoinColumns = @JoinColumn(name = "tag_id")
+
+
+
+
