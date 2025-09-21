@@ -25,13 +25,13 @@
     - [x] `PostTag` 중간 테이블을 포함한 관계 설정 완료
 
 ### Week 2: 핵심 API 구현
-- [ ] **사용자 인증 API**
+- [x] **사용자 인증 API**
     - [x] `UserRepository` 인터페이스 생성
-    - [ ] `UserDetailsService` 구현
-    - [ ] `PasswordEncoder` 빈 등록
-    - [ ] 회원가입 API (`POST /api/auth/signup`) 컨트롤러 및 서비스 로직 구현
-    - [ ] 로그인 API (`POST /api/auth/login`) 컨트롤러 및 서비스 로직 구현 (JWT 토큰 생성 포함)
-    - [ ] JWT 인증 필터 설정 (`JwtAuthenticationFilter`)
+    - [x] `UserDetailsService` 구현
+    - [x] `PasswordEncoder` 빈 등록
+    - [x] 회원가입 API (`POST /api/auth/signup`) 컨트롤러 및 서비스 로직 구현
+    - [x] 로그인 API (`POST /api/auth/login`) 컨트롤러 및 서비스 로직 구현 (JWT 토큰 생성 포함)
+    - [x] JWT 인증 필터 설정 (`JwtAuthenticationFilter`)
 - [ ] **포스트/카테고리/태그 API**
     - [x] `PostRepository`, `CategoryRepository`, `TagRepository` 인터페이스 생성
     - [ ] 포스트 생성 API (`POST /api/posts`) 구현
