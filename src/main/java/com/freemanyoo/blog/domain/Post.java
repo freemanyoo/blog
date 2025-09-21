@@ -51,4 +51,6 @@ public class Post extends BaseTimeEntity {
             inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
     private Set<Tag> tags = new HashSet<>();
+    //****************좀 이해가 안되니 프런트 개발하고 좀 어떤로직인지 더봐야 이해 될듯************
+
 }

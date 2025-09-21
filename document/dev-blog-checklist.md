@@ -16,17 +16,17 @@
     - [x] `build.gradle`에 `io.github.cdimascio.dotenv` 플러그인 추가
 - [ ] **JPA/Hibernate 설정**
     - [x] `application.properties`에 `ddl-auto`, `show-sql` 등 설정
-- [ ] **JPA 엔티티 및 관계 매핑**
+- [x] **JPA 엔티티 및 관계 매핑**
     - [x] 공통 필드(`createdAt`, `updatedAt`)를 위한 `BaseTimeEntity` 생성
     - [x] `User` 엔티티를 `BaseTimeEntity` 상속하도록 수정
     - [x] `Category` 엔티티 클래스 생성
-    - [ ] `Tag` 엔티티 클래스 생성
-    - [ ] `Post` 엔티티 클래스 생성 (`BaseTimeEntity` 상속)
-    - [ ] `PostTag` 중간 테이블을 포함한 관계 설정 (`@OneToMany`, `@ManyToMany`)
+    - [x] `Tag` 엔티티 클래스 생성
+    - [x] `Post` 엔티티 클래스 생성 (`BaseTimeEntity` 상속)
+    - [x] `PostTag` 중간 테이블을 포함한 관계 설정 완료
 
 ### Week 2: 핵심 API 구현
 - [ ] **사용자 인증 API**
-    - [ ] `UserRepository` 인터페이스 생성
+    - [x] `UserRepository` 인터페이스 생성
     - [ ] `UserDetailsService` 구현
     - [ ] `PasswordEncoder` 빈 등록
     - [ ] 회원가입 API (`POST /api/auth/signup`) 컨트롤러 및 서비스 로직 구현
