@@ -33,7 +33,7 @@
     - [ ] 로그인 API (`POST /api/auth/login`) 컨트롤러 및 서비스 로직 구현 (JWT 토큰 생성 포함)
     - [ ] JWT 인증 필터 설정 (`JwtAuthenticationFilter`)
 - [ ] **포스트/카테고리/태그 API**
-    - [ ] `PostRepository`, `CategoryRepository`, `TagRepository` 인터페이스 생성
+    - [x] `PostRepository`, `CategoryRepository`, `TagRepository` 인터페이스 생성
     - [ ] 포스트 생성 API (`POST /api/posts`) 구현
     - [ ] 포스트 수정 API (`PUT /api/posts/{id}`) 구현
     - [ ] 포스트 삭제 API (`DELETE /api/posts/{id}`) 구현
